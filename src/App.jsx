@@ -9,6 +9,7 @@ import Education from "./pages/Education";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import Life from "./pages/Life";
+import AboutSection from "./pages/AboutSection";
 
 export default function App() {
   return (

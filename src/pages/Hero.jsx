@@ -1,13 +1,25 @@
 import React from "react";
+import "./Hero.css"; // we'll make a soft gradient here
 
 export default function Hero() {
   return (
-    <section style={{ textAlign: "center", padding: "4rem 2rem", backgroundColor: "#fff0f6" }}>
-      <h1 style={{ fontSize: "3rem", color: "#ff6f91" }}>Hi, I'm Richa Bharti</h1>
-      <p style={{ color: "#ff8fab", fontSize: "1.2rem", marginTop: "1rem" }}>
-        Welcome to my cute & lively portfolio 🌸<br />
-        Explore my journey, creativity, and skills below!
+    <section className="hero-section">
+      <div className="hero-image-container">
+        {/* Replace with your image URL */}
+        <img
+          src="https://via.placeholder.com/160"
+          alt="Richa Bharti"
+          className="hero-image"
+        />
+      </div>
+      <h1 className="hero-title">Hi, I'm Richa Bharti</h1>
+      <p className="hero-subtitle">
+        Welcome to my cute & lively portfolio!  
+        Let’s explore my world of projects, experiences, and creativity.
       </p>
+      <a href="/projects" className="explore-button">
+        ✨ Explore My Work
+      </a>
     </section>
   );
 }

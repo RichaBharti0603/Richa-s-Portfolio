@@ -1,0 +1,29 @@
+.about-section {
+  background-color: #fff0f5;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  max-width: 800px;
+  background: #ffffff;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 111, 145, 0.2);
+  text-align: center;
+}
+
+.about-title {
+  color: #ff6f91;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-text {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
