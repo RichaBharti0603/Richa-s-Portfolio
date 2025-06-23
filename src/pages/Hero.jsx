@@ -1,25 +1,21 @@
 import React from "react";
-import "./Hero.css"; // we'll make a soft gradient here
+import "./Hero.css"; // make sure this exists or create it next
 
 export default function Hero() {
   return (
     <section className="hero-section">
       <div className="hero-image-container">
-        {/* Replace with your image URL */}
+        {/* Placeholder - replace src with your picture later */}
         <img
-          src="https://via.placeholder.com/160"
+          src="https://via.placeholder.com/250"
           alt="Richa Bharti"
           className="hero-image"
         />
       </div>
       <h1 className="hero-title">Hi, I'm Richa Bharti</h1>
       <p className="hero-subtitle">
-        Welcome to my cute & lively portfolio!  
-        Let’s explore my world of projects, experiences, and creativity.
+        Welcome to my cute & lively portfolio! Explore my journey, projects, and passions.
       </p>
-      <a href="/projects" className="explore-button">
-        ✨ Explore My Work
-      </a>
     </section>
   );
 }

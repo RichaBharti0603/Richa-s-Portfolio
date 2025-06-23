@@ -1,0 +1,25 @@
+.header {
+  background-color: #fff0f5;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(255, 111, 145, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.nav a {
+  color: #ff6f91;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #d0416e;
+}
