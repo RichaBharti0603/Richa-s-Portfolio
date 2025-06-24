@@ -1,4 +1,3 @@
-// At the top – same as before
 import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import NET from "vanta/src/vanta.net";
@@ -21,8 +20,8 @@ export default function Home() {
         NET({
           el: vantaRef.current,
           THREE: THREE,
-          color: 0xcccccc, // light grey net lines
-          backgroundColor: 0x0e101a, // deep navy
+          color: 0xcccccc, // subtle net color
+          backgroundColor: 0x0e101a, // dark background for intro only
           maxDistance: 20,
           spacing: 18,
           showDots: true,
@@ -39,33 +38,102 @@ export default function Home() {
   }, [vantaEffect]);
 
   return (
-    <div ref={vantaRef} className="home-container">
-      <div className="intro-card">
-        <div className="profile-pic-placeholder">R</div>
-        <h1>Hello, I'm Richa Bharti</h1>
-        <h3>Crafting code with care — for people, planet, and purpose.</h3>
-        <p>Hey there! I’m Richa Bharti — a Computer Science student, full-stack developer, and builder at heart with a mission to make technology more empathetic, inclusive, and impactful. Whether it’s developing AI-powered platforms like Prakriti to encourage sustainable living, designing warm digital spaces like Vandana to connect people during the holidays, or building civic tools that bridge communities and governance — I code with purpose. I love turning real-world problems into thoughtful digital experiences, blending meaningful design with solid engineering. Hackathons, social good projects, and community-centered innovation keep me energized. If it touches lives, tells a story, or solves something real — I’m all in.
+    <>
+      <div ref={vantaRef} className="home-container">
+        <div className="intro-card">
+          <div className="profile-pic-placeholder">R</div>
+          <h1>Hello, I'm Richa Bharti</h1>
+          <h3>Crafting code with care — for people, planet, and purpose.</h3>
+          <p>
+            Hey there! I’m Richa Bharti — a Computer Science student, full-stack
+            developer, and builder at heart with a mission to make technology
+            more empathetic, inclusive, and impactful.
+          </p>
+          <p>
+            Whether it’s developing AI-powered platforms like <b>Prakriti</b>,
+            designing warm digital spaces like <b>Vandana</b>, or building civic
+            tools like <b>Nagrik</b> — I code with purpose. I love turning
+            real-world problems into thoughtful digital experiences, blending
+            design with solid engineering.
+          </p>
+          <p>
+            Hackathons, social good, and community-centered innovation keep me
+            energized. If it touches lives, tells a story, or solves something
+            real — I’m all in.
+          </p>
 
-</p>
-        <div className="social-icons">
-          <a href="https://github.com/RichaBharti0603" target="_blank" rel="noreferrer"><FaGithub /></a>
-          <a href="https://www.linkedin.com/in/richa-bharti-508ba0283/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
-          <a href="https://x.com/RichaBhart67374" target="_blank" rel="noreferrer"><FaXTwitter /></a>
-          <a href="https://www.instagram.com/richajha917/?hl=en" target="_blank" rel="noreferrer"><FaInstagram /></a>
+          <div className="social-icons">
+            <a
+              href="https://github.com/RichaBharti0603"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/richa-bharti-508ba0283/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://x.com/RichaBhart67374"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaXTwitter />
+            </a>
+            <a
+              href="https://www.instagram.com/richajha917/?hl=en"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaInstagram />
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* Section previews - same as before */}
+      {/* Section Previews - Separate from animated background */}
       <div className="sections-preview">
-        <SectionPreview title="Projects" link="/projects" desc="A showcase of my top work, with links to GitHub and live demos." />
-        <SectionPreview title="Skills" link="/skills" desc="A rundown of my technical & creative skillset." />
-        <SectionPreview title="Experience" link="/experience" desc="Professional & volunteer experiences that shaped my journey." />
-        <SectionPreview title="Education" link="/education" desc="My academic background and learnings." />
-        <SectionPreview title="Gallery" link="/gallery" desc="A visual space for highlights and memories." />
-        <SectionPreview title="Life" link="/life" desc="Stories, reflections & moments beyond tech." />
-        <SectionPreview title="Contact" link="/contact" desc="Let’s connect! I’m just a click away." />
+        <SectionPreview
+          title="Projects"
+          link="/projects"
+          desc="A showcase of my top work, with GitHub and live demos."
+        />
+        <SectionPreview
+          title="Skills"
+          link="/skills"
+          desc="A rundown of my technical & creative skills."
+        />
+        <SectionPreview
+          title="Experience"
+          link="/experience"
+          desc="Professional and volunteer experiences that shaped my journey."
+        />
+        <SectionPreview
+          title="Education"
+          link="/education"
+          desc="My academic background and key learnings."
+        />
+        <SectionPreview
+          title="Gallery"
+          link="/gallery"
+          desc="A visual archive of highlights and moments."
+        />
+        <SectionPreview
+          title="Life"
+          link="/life"
+          desc="Stories, reflections, and experiences beyond code."
+        />
+        <SectionPreview
+          title="Contact"
+          link="/contact"
+          desc="Let’s connect — I’m just a message away!"
+        />
       </div>
-    </div>
+    </>
   );
 }
 
@@ -74,7 +142,9 @@ function SectionPreview({ title, desc, link }) {
     <div className="section-preview">
       <h2>{title}</h2>
       <p>{desc}</p>
-      <Link to={link}>Explore {title}</Link>
+      <Link to={link} className="section-link">
+        Explore {title}
+      </Link>
     </div>
   );
 }

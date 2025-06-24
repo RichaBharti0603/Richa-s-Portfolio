@@ -1,139 +1,123 @@
-/* Overall container */
+/* Intro section with animated background */
 .home-container {
-  min-height: 100vh;
-  width: 100%;
   position: relative;
-  overflow: hidden;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #f5f5f5;
-}
-
-/* Intro card with blurred background */
-.intro-card {
-  max-width: 700px;
-  margin: 5rem auto 3rem;
-  padding: 3rem;
-  background: rgba(255, 255, 255, 0.07);
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-  text-align: center;
-  z-index: 2;
-  position: relative;
-}
-
-/* Profile image placeholder */
-.profile-pic-placeholder {
-  width: 130px;
-  height: 130px;
-  margin: 0 auto 1.5rem;
-  border-radius: 50%;
-  background-color: #dcdcdc;
-  color: #2d2d2d;
+  height: 100vh;
+  color: #f1f1f1;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
-  font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
-/* Intro heading and text */
+.intro-card {
+  z-index: 1;
+  max-width: 850px;
+  background-color: rgba(255, 255, 255, 0.1); /* translucent white for contrast */
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #ffffff;
+}
+
+.profile-pic-placeholder {
+  width: 130px;
+  height: 130px;
+  background-color: #3e3e3e;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  font-size: 3rem;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
 .intro-card h1 {
   font-size: 2.5rem;
-  margin-bottom: 0.8rem;
-  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.intro-card h3 {
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  color: #dcdcdc;
 }
 
 .intro-card p {
-  font-size: 1.1rem;
-  color: #dddddd;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   line-height: 1.6;
+  font-size: 1.05rem;
+  color: #f0f0f0;
 }
 
-/* Social media icon bar */
+/* Social icons */
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  font-size: 1.6rem;
-  color: #ffffff;
+  gap: 1.2rem;
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
 }
 
 .social-icons a {
   color: #ffffff;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #7ac9f9;
-  transform: scale(1.15);
+  color: #7fd1f5;
 }
 
-/* Section previews below intro */
+/* Section previews after intro */
 .sections-preview {
+  padding: 4rem 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  padding: 2rem;
-  max-width: 1100px;
-  margin: 0 auto 3rem;
+  background-color: #fdfdfd;
+  color: #222;
 }
 
 .section-preview {
-  background: rgba(255, 255, 255, 0.05);
+  background-color: #ffffff;
   border-radius: 16px;
-  padding: 1.8rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   text-align: center;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .section-preview:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .section-preview h2 {
-  color: #ffffff;
-  font-size: 1.5rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #333;
 }
 
 .section-preview p {
-  font-size: 0.95rem;
-  color: #cccccc;
+  font-size: 1rem;
+  color: #666;
   margin-bottom: 1rem;
 }
 
-.section-preview a {
-  color: #85d2ff;
+.section-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #1f1f1f;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
 }
 
-.section-preview a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .intro-card {
-    padding: 2rem;
-  }
-
-  .profile-pic-placeholder {
-    width: 100px;
-    height: 100px;
-    font-size: 2.2rem;
-  }
-
-  .social-icons {
-    gap: 1rem;
-    font-size: 1.4rem;
-  }
-
-  .sections-preview {
-    padding: 1.2rem;
-  }
+.section-link:hover {
+  background-color: #444;
 }
