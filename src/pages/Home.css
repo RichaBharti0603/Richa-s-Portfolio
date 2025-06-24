@@ -1,61 +1,139 @@
+/* Overall container */
 .home-container {
-  background: linear-gradient(to right, #ffeaf4, #fff8fb);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 4rem 2rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #f5f5f5;
 }
 
-.home-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Intro card with blurred background */
+.intro-card {
+  max-width: 700px;
+  margin: 5rem auto 3rem;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
   text-align: center;
-  max-width: 900px;
+  z-index: 2;
+  position: relative;
 }
 
-.home-image img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
+/* Profile image placeholder */
+.profile-pic-placeholder {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 1.5rem;
   border-radius: 50%;
-  box-shadow: 0 6px 20px rgba(255, 111, 145, 0.3);
-  margin-bottom: 1.5rem;
+  background-color: #dcdcdc;
+  color: #2d2d2d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.home-text h1 {
+/* Intro heading and text */
+.intro-card h1 {
   font-size: 2.5rem;
-  color: #d0416e;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+}
+
+.intro-card p {
+  font-size: 1.1rem;
+  color: #dddddd;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Social media icon bar */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+.social-icons a {
+  color: #ffffff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #7ac9f9;
+  transform: scale(1.15);
+}
+
+/* Section previews below intro */
+.sections-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+}
+
+.section-preview {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.8rem;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.section-preview:hover {
+  transform: translateY(-5px);
+}
+
+.section-preview h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.section-preview p {
+  font-size: 0.95rem;
+  color: #cccccc;
   margin-bottom: 1rem;
 }
 
-.home-text p {
-  font-size: 1.1rem;
-  color: #555;
-  max-width: 600px;
-  margin-bottom: 2rem;
-}
-
-.home-button {
-  background-color: #ff6f91;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
+.section-preview a {
+  color: #85d2ff;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
 }
 
-.home-button:hover {
-  background-color: #e9577f;
+.section-preview a:hover {
+  text-decoration: underline;
 }
 
-.scroll-down {
-  margin-top: 3rem;
-  color: #888;
-  font-size: 0.95rem;
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .intro-card {
+    padding: 2rem;
+  }
+
+  .profile-pic-placeholder {
+    width: 100px;
+    height: 100px;
+    font-size: 2.2rem;
+  }
+
+  .social-icons {
+    gap: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .sections-preview {
+    padding: 1.2rem;
+  }
 }

@@ -1,25 +1,47 @@
-.header {
-  background-color: #fff0f5;
+header {
+  background-color: #ffffff;
   padding: 1rem 2rem;
-  box-shadow: 0 4px 6px rgba(255, 111, 145, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #eaeaea;
 }
 
 .nav {
   display: flex;
   justify-content: center;
-  gap: 1.2rem;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .nav a {
-  color: #ff6f91;
+  color: #444;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #6abfff;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s;
 }
 
 .nav a:hover {
-  color: #d0416e;
+  color: #0a66c2;
+}
+
+.nav a:hover::after {
+  width: 100%;
 }
