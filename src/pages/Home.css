@@ -1,123 +1,120 @@
-/* Intro section with animated background */
 .home-container {
   position: relative;
-  height: 100vh;
-  color: #f1f1f1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-top: 5rem;
+  background-color: #f4f6fa; /* soft neutral background */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .intro-card {
-  z-index: 1;
+  position: relative;
+  z-index: 2;
   max-width: 850px;
-  background-color: rgba(255, 255, 255, 0.1); /* translucent white for contrast */
-  backdrop-filter: blur(10px);
-  padding: 3rem;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 3rem 2rem;
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   text-align: center;
-  color: #ffffff;
 }
 
 .profile-pic-placeholder {
-  width: 130px;
-  height: 130px;
-  background-color: #3e3e3e;
+  width: 140px;
+  height: 140px;
+  background-color: #d8e0ff;
   border-radius: 50%;
-  margin: 0 auto 1rem;
-  font-size: 3rem;
-  color: #e0e0e0;
+  font-size: 3.5rem;
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  font-weight: bold;
+  margin: 0 auto 1.5rem;
+  color: #3c3f58;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .intro-card h1 {
   font-size: 2.5rem;
+  color: #1e1e2f;
   margin-bottom: 0.5rem;
 }
 
 .intro-card h3 {
+  font-size: 1.2rem;
+  color: #5f5f73;
+  margin-bottom: 1rem;
   font-weight: 500;
-  margin-bottom: 1.2rem;
-  color: #dcdcdc;
 }
 
 .intro-card p {
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #3e3e55;
   line-height: 1.6;
-  font-size: 1.05rem;
-  color: #f0f0f0;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
 }
 
-/* Social icons */
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 1.2rem;
-  font-size: 1.8rem;
-  margin-top: 1.5rem;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+  color: #444;
 }
 
 .social-icons a {
-  color: #ffffff;
-  transition: color 0.3s ease;
+  color: #4a4a60;
+  transition: transform 0.2s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #7fd1f5;
+  color: #5e79d9;
+  transform: scale(1.2);
 }
 
-/* Section previews after intro */
 .sections-preview {
-  padding: 4rem 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  background-color: #fdfdfd;
-  color: #222;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
 }
 
 .section-preview {
-  background-color: #ffffff;
+  background-color: #ffffffd6;
+  border: 1px solid #e0e0ef;
+  padding: 1.5rem;
   border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.section-preview:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .section-preview h2 {
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
-  color: #333;
+  color: #2c2c3e;
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
 }
 
 .section-preview p {
-  font-size: 1rem;
-  color: #666;
+  font-size: 0.95rem;
+  color: #66667a;
   margin-bottom: 1rem;
 }
 
-.section-link {
+.section-preview a {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #1f1f1f;
-  color: #fff;
   text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s;
+  color: #5e79d9;
+  font-weight: bold;
 }
 
-.section-link:hover {
-  background-color: #444;
+.section-preview:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }

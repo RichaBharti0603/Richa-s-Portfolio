@@ -10,6 +10,7 @@ import Education from "./pages/Education";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import Life from "./pages/Life";
+import Certifications from "./pages/Certifications";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/skills" element={<Skills />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/education" element={<Education />} />
+        <Route path="/certifications" element={<Certifications />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/life" element={<Life />} />

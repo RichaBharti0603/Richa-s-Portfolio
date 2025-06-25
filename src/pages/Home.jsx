@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import NET from "vanta/src/vanta.net";
+import Typed from "typed.js";
 import "./Home.css";
 import {
   FaGithub,
@@ -13,6 +14,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   const vantaRef = useRef(null);
   const [vantaEffect, setVantaEffect] = useState(null);
+  const typedRef = useRef(null);
 
   useEffect(() => {
     if (!vantaEffect) {
@@ -20,8 +22,8 @@ export default function Home() {
         NET({
           el: vantaRef.current,
           THREE: THREE,
-          color: 0xcccccc, // subtle net color
-          backgroundColor: 0x0e101a, // dark background for intro only
+          color: 0xcccccc,
+          backgroundColor: 0x0e101a,
           maxDistance: 20,
           spacing: 18,
           showDots: true,
@@ -37,31 +39,30 @@ export default function Home() {
     };
   }, [vantaEffect]);
 
+  useEffect(() => {
+    const typed = new Typed(typedRef.current, {
+      strings: ["Developer", "Dreamer", "Builder", "Creator"],
+      typeSpeed: 60,
+      backSpeed: 30,
+      loop: true,
+    });
+    return () => typed.destroy();
+  }, []);
+
   return (
-    <>
-      <div ref={vantaRef} className="home-container">
+    <div className="home-container">
+      <div className="hero-section" ref={vantaRef}>
         <div className="intro-card">
           <div className="profile-pic-placeholder">R</div>
           <h1>Hello, I'm Richa Bharti</h1>
-          <h3>Crafting code with care — for people, planet, and purpose.</h3>
+          <h3>
+            I am a <span ref={typedRef} className="typed-text"></span>
+          </h3>
           <p>
-            Hey there! I’m Richa Bharti — a Computer Science student, full-stack
-            developer, and builder at heart with a mission to make technology
-            more empathetic, inclusive, and impactful.
+            Hey there! I’m Richa — a Computer Science student, full-stack
+            developer, and builder at heart with a mission to create
+            user-centered tech that empowers lives and solves real problems.
           </p>
-          <p>
-            Whether it’s developing AI-powered platforms like <b>Prakriti</b>,
-            designing warm digital spaces like <b>Vandana</b>, or building civic
-            tools like <b>Nagrik</b> — I code with purpose. I love turning
-            real-world problems into thoughtful digital experiences, blending
-            design with solid engineering.
-          </p>
-          <p>
-            Hackathons, social good, and community-centered innovation keep me
-            energized. If it touches lives, tells a story, or solves something
-            real — I’m all in.
-          </p>
-
           <div className="social-icons">
             <a
               href="https://github.com/RichaBharti0603"
@@ -95,45 +96,44 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Section Previews - Separate from animated background */}
       <div className="sections-preview">
         <SectionPreview
           title="Projects"
           link="/projects"
-          desc="A showcase of my top work, with GitHub and live demos."
+          desc="Explore my full-stack projects solving real-world problems."
         />
         <SectionPreview
           title="Skills"
           link="/skills"
-          desc="A rundown of my technical & creative skills."
+          desc="Languages, frameworks, and tools I use to build amazing things."
         />
         <SectionPreview
           title="Experience"
           link="/experience"
-          desc="Professional and volunteer experiences that shaped my journey."
+          desc="From internships to volunteering — where I've contributed and grown."
         />
         <SectionPreview
           title="Education"
           link="/education"
-          desc="My academic background and key learnings."
+          desc="My academic background and technical journey."
         />
         <SectionPreview
           title="Gallery"
           link="/gallery"
-          desc="A visual archive of highlights and moments."
+          desc="Glimpses of my design work, memories, and achievements."
         />
         <SectionPreview
           title="Life"
           link="/life"
-          desc="Stories, reflections, and experiences beyond code."
+          desc="A peek into my personal reflections, hobbies, and stories."
         />
         <SectionPreview
           title="Contact"
           link="/contact"
-          desc="Let’s connect — I’m just a message away!"
+          desc="Let’s connect! I’m open to collaborations and conversations."
         />
       </div>
-    </>
+    </div>
   );
 }
 
@@ -142,9 +142,7 @@ function SectionPreview({ title, desc, link }) {
     <div className="section-preview">
       <h2>{title}</h2>
       <p>{desc}</p>
-      <Link to={link} className="section-link">
-        Explore {title}
-      </Link>
+      <Link to={link}>Explore {title}</Link>
     </div>
   );
 }
