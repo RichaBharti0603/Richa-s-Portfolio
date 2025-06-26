@@ -118,3 +118,343 @@
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
+.home-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-top: 5rem;
+  background-color: #f4f6fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section (Vanta Background is here) */
+.hero-section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.intro-card {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.profile-pic-placeholder {
+  width: 140px;
+  height: 140px;
+  background-color: #d8e0ff;
+  border-radius: 50%;
+  font-size: 3.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: #3c3f58;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro-card h1 {
+  font-size: 2.5rem;
+  color: #1e1e2f;
+  margin-bottom: 0.5rem;
+}
+
+.intro-card h3 {
+  font-size: 1.2rem;
+  color: #5f5f73;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.intro-card p {
+  font-size: 1rem;
+  color: #3e3e55;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.typed-text {
+  color: #5e79d9;
+  font-weight: bold;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+  color: #444;
+}
+
+.social-icons a {
+  color: #4a4a60;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #5e79d9;
+  transform: scale(1.2);
+}
+
+/* Sections */
+.sections-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+}
+
+.section-preview {
+  background-color: #ffffffd6;
+  border: 1px solid #e0e0ef;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.section-preview h2 {
+  color: #2c2c3e;
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.section-preview p {
+  font-size: 0.95rem;
+  color: #66667a;
+  margin-bottom: 1rem;
+}
+
+.section-preview a {
+  display: inline-block;
+  text-decoration: none;
+  color: #5e79d9;
+  font-weight: bold;
+}
+
+.section-preview:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Footer */
+.site-footer {
+  background-color: #1e1e2f;
+  color: #ccc;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  border-top: 1px solid #333;
+}
+
+.site-footer .footer-links {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.site-footer .footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.site-footer .footer-links a:hover {
+  color: #5e79d9;
+}
+
+.footer-note {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+.section-preview .desc-text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.contact-form-section {
+  max-width: 600px;
+  margin: 4rem auto;
+  background: #ffffffef;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.contact-form-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #2c2c3e;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.contact-form-section button {
+  background-color: #5e79d9;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form-section button:hover {
+  background-color: #435bb3;
+}
+/* Add this to your Home.css */
+
+.contact-form-container {
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.contact-form-container h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form-container form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: none;
+}
+
+.contact-form-container button {
+  background-color: #5e79d9;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.status-message {
+  margin-top: 1rem;
+  color: green;
+}
+
+/* Notable Projects */
+.notable-projects {
+  padding: 3rem 2rem;
+  background-color: #f4f6fa;
+}
+
+.notable-projects h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #2c2c3e;
+}
+
+.project-card {
+  background-color: white;
+  margin: 1rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.project-links a {
+  margin-right: 1rem;
+  color: #5e79d9;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.youtube-embed {
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .intro-card, .project-card, .contact-form-container form {
+    padding: 1rem;
+  }
+
+  .section-preview {
+    padding: 1rem;
+  }
+}
+.visitor-count {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffffee;
+  color: #2c2c3e;
+  padding: 10px 16px;
+  border: 1px solid #d0d0e0;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  font-size: 0.95rem;
+  font-weight: 500;
+  z-index: 999;
+  cursor: default;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.visitor-count:hover {
+  transform: scale(1.05);
+  background-color: #f5f5ff;
+}
