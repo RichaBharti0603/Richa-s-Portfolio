@@ -1,5 +1,5 @@
 import React from "react";
-import "./AboutSection.css"; // we'll create styling here
+import "./AboutSection.css"; 
 
 export default function AboutSection() {
   return (

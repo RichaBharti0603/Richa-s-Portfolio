@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Visitor = require("../models/Visitor");
 
-// Increment and get visitor count
+
 router.get("/", async (req, res) => {
   try {
     let visitor = await Visitor.findOne();
