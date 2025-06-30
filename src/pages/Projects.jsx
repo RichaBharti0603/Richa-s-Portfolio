@@ -3,10 +3,10 @@ import "./Projects.css";
 
 const projects = [
   {
-    title: "YouTube Clone",
-    description: "A responsive clone of YouTube built with React and RapidAPI, featuring video search and playback.",
-    github: "https://github.com/yourusername/youtube-clone",
-    live: "https://youtube-clone-demo.vercel.app",
+    title: "Nagrik",
+    description: "Civic engagement platform empowering users to raise local issues, vote on solutions, and interact with authorities.",
+    github: "https://github.com/RichaBharti0603/Nagrik-citizen-",
+    live: "https://nagrik-citizen.vercel.app/",
   },
   {
     title: "Finance Tracking Website",
@@ -68,12 +68,7 @@ const projects = [
     github: "https://github.com/yourusername/petsaver",
     live: "https://petsaver.vercel.app",
   },
-  {
-    title: "Nagrik",
-    description: "Civic engagement platform empowering users to raise local issues, vote on solutions, and interact with authorities.",
-    github: "https://github.com/yourusername/nagrik",
-    live: "https://nagrik.vercel.app",
-  },
+  
 ];
 
 export default function Projects() {

@@ -3,12 +3,13 @@ import "./Certifications.css";
 
 export default function Certifications() {
   const leetcodeBadges = [
-    "https://leetcode.com/medal/?showImg=0&id=7240971&isLevel=false",
-    "https://leetcode.com/medal/?showImg=0&id=6852292&isLevel=false",
-    "https://leetcode.com/medal/?showImg=0&id=7168123&isLevel=false",
-    "https://leetcode.com/medal/?showImg=0&id=6932822&isLevel=false",
-    "https://leetcode.com/medal/?showImg=0&id=6868448&isLevel=false",
-    "https://leetcode.com/medal/?showImg=0&id=6801985&isLevel=false",
+    "/images/leetcode/badge1.png",
+    "/images/leetcode/badge2.png",
+    "/images/leetcode/badge3.png",
+    "/images/leetcode/badge4.png",
+    "/images/leetcode/badge5.png",
+    "/images/leetcode/badge6.png",
+    "/images/leetcode/badge7.png",
   ];
 
   return (
@@ -27,7 +28,6 @@ export default function Certifications() {
         ))}
       </div>
 
-      {/* Placeholder for future certs */}
       <h3>🎓 Other Certifications (LinkedIn, Coursera, etc.)</h3>
       <p>Coming soon...</p>
     </div>

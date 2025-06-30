@@ -221,20 +221,7 @@ export default function Home() {
       <p>
         Tech is just one side — here I share poems, reflections,
         hobbies, and everything that makes me who I am.
-      </p>
-      <p>Here's a snapshot from my college journey:</p>
-      <img
-        src="/images/college-life.jpg"
-        alt="College Life"
-        style={{
-          width: "100%",
-          maxWidth: "500px",
-          margin: "1rem auto",
-          borderRadius: "12px",
-          boxShadow: "0 6px 12px rgba(0,0,0,0.1)",
-          display: "block"
-        }}
-      />
+      </p>  
     </>
   )
 },
