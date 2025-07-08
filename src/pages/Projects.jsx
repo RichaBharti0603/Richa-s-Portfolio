@@ -9,6 +9,12 @@ const projects = [
     live: "https://nagrik-citizen.vercel.app/",
   },
   {
+  title: "🧠 Emotion Reflection Tool",
+  description:"A minimal, mobile-first app that lets users reflect and receive an emotional analysis in real-time. Built with React, Express, and OpenAI API.",
+  github:"https://github.com/RichaBharti0603/emotion-reflection-tool",
+  live: "https://emotion-reflection-tool.vercel.app",
+  },
+  {
     title: "Finance Tracking Website",
     description: "Track income, expenses, and budgets visually using charts and graphs with full CRUD operations.",
     github: "https://github.com/yourusername/finance-tracker",
